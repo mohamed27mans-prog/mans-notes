@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mans Notes | متجر الدفاتر</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .header .slogan {
+            color: #7f8c8d;
+        }
+
+        .contact-info {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            color: #34495e;
+        }
+
+        .product-card p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e67e22;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            justify-content: center;
+        }
+
+        .btn-order {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .btn-order:hover {
+            background-color: #219150;
+        }
+
+        .btn-delete {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-delete:hover {
+            background-color: #c0392b;
+        }
+
+        @media (max-width: 600px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Mans Notes</h1>
+        <p class="slogan">make your notebook with us</p>
+    </div>
+    <div class="contact-info">
+        <span>for order: <a href="tel:+01289400568">+01289400568</a></span>
+        <span>For inquiries: <a href="mailto:mohamed27mans@gmail.com">mohamed27mans@gmail.com</a></span>
+    </div>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://i.pinimg.com/736x/37/0f/83/370f837273108ec2b24a0384e850b217.jpg"
+                alt="Premium genuine leather notebook cover" class="product-image">
+            <h3>Premium leather-bound notebook</h3>
+            <p>A premium notebook with a genuine leather cover, designed for professionals who value both style and
+                function. High-quality paper that handles both ink and gel pens smoothly. A perfect gift or personal
+                upgrade for your office desk.</p>
+            <div class="price">500 EGP</div>
+            <div class="actions">
+                <button class="btn-order" onclick="alert('The notebook has been added')">order now</button>
+                <button class="btn-delete" onclick="alert('The notebook has been removed')">🗑️</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://i.pinimg.com/736x/82/bd/9c/82bd9c66071316a6d18aaafa670bed44.jpg"
+                alt="Printed notebook with custom cover design" class="product-image">
+            <h3>Printed notebook</h3>
+            <p>Custom-printed cover, choose from 18 unique designs. Perfect for students, artists, and anyone who wants
+                a notebook that reflects their personality. Durable print that won't fade with daily use.</p>
+            <div class="price">300 EGP</div>
+            <div class="actions">
+                <button class="btn-order" onclick="alert('The notebook has been added.')">order now</button>
+                <button class="btn-delete" onclick="alert('The notebook has been removed.')">🗑️</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://i.pinimg.com/1200x/db/74/89/db7489fc0fdd6057d51c762567eba685.jpg"
+                alt="Recycled paper notebook eco-friendly hardcover" class="product-image">
+            <h3>Recycled paper notebook</h3>
+            <p>Eco-friendly recycled paper with a sturdy hardcover, available in blank or lined pages. Great for
+                journaling, sketching, or everyday notes. A sustainable choice for the environmentally conscious writer.
+            </p>
+            <div class="price">150 EGP</div>
+            <div class="actions">
+                <button class="btn-order" onclick="alert('The notebook has been added')">order now</button>
+                <button class="btn-delete" onclick="alert('The notebook has been removed')">🗑️</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
