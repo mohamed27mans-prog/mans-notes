@@ -4,11 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mans Notes | متجر الدفاتر</title>
+
+    <!-- 2. Meta Description (Crucial for Google Search) -->
+    <title>Mans Notes | Custom Notebooks in Egypt</title>
+    <meta name="description"
+        content="Create your perfect notebook in Egypt! Luxury leather, printed, and eco-friendly notebooks. Order now with delivery across all governorates.">
+
+    <!-- 4. Open Graph Tags (Crucial for Facebook/WhatsApp sharing) -->
+    <meta property="og:title" content="Mans Notes - Custom Notebooks">
+    <meta property="og:description" content="Choose the design, paper, and cover. Luxury notebooks delivered in Egypt.">
+    <meta property="og:image" content="https://mohamed27mans-prog.github.io/mans-notes/notebook-cover.jpg">
+    <meta property="og:url" content="https://mohamed27mans-prog.github.io/mans-notes/">
+    <meta property="og:type" content="website">
+
+    <!-- 1. Structured Data (JSON-LD) - Tells Google the Price & Product info -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Mans Notes Custom Notebooks",
+      "image": "https://mohamed27mans-prog.github.io/mans-notes/notebook-cover.jpg",
+      "description": "Custom made notebooks with premium quality",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EGP",
+        "lowPrice": "150",
+        "highPrice": "500",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!-- CSS Styling -->
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 20px;
             color: #333;
@@ -24,10 +55,6 @@
         .header h1 {
             color: #2c3e50;
             margin: 0;
-        }
-
-        .header .slogan {
-            color: #7f8c8d;
         }
 
         .contact-info {
@@ -72,13 +99,26 @@
             transform: translateY(-5px);
         }
 
+        /* ========================================= */
+        /* THIS IS THE FIX FOR THE IMAGE SIZE         */
+        /* ========================================= */
         .product-image {
             width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
+            height: 200px;
+            background-color: #f0f0f0;
+            /* Light gray background for empty spaces */
             border-radius: 8px;
             margin-bottom: 15px;
+
+            /* CHANGED TO CONTAIN - Shows the entire image without cropping */
+            background-size: contain;
+
+            /* Centers the image perfectly */
+            background-position: center;
+            background-repeat: no-repeat;
         }
+
+        /* ========================================= */
 
         .product-card h3 {
             margin: 10px 0;
@@ -144,54 +184,57 @@
 </head>
 
 <body>
+
     <div class="header">
-        <h1>Mans Notes</h1>
-        <p class="slogan">make your notebook with us</p>
+        <h1>📒 Mans Notes</h1>
+        <p class="slogan">Choose the design, paper, and cover - Create your notebook in Egypt</p>
     </div>
+
     <div class="contact-info">
-        <span>for order: <a href="tel:+01289400568">+01289400568</a></span>
-        <span>For inquiries: <a href="mailto:mohamed27mans@gmail.com">mohamed27mans@gmail.com</a></span>
+        <span>📞 Direct Order: <a href="tel:+201234567890">+20 123 456 7890</a></span>
+        <span>📧 Inquiries: <a href="mailto:sales@mansnotes.com">sales@mansnotes.com</a></span>
     </div>
+
     <div class="products">
+
+        <!-- Product 1 -->
         <div class="product-card">
-            <img src="https://i.pinimg.com/736x/37/0f/83/370f837273108ec2b24a0384e850b217.jpg"
-                alt="Premium genuine leather notebook cover" class="product-image">
-            <h3>Premium leather-bound notebook</h3>
-            <p>A premium notebook with a genuine leather cover, designed for professionals who value both style and
-                function. High-quality paper that handles both ink and gel pens smoothly. A perfect gift or personal
-                upgrade for your office desk.</p>
+            <div class="product-image" style="background-image: url('notebook-leather.jpg');"></div>
+            <h3>Luxury Leather Notebook</h3>
+            <p>Natural leather cover notebook, perfect for professional writing.</p>
             <div class="price">500 EGP</div>
             <div class="actions">
-                <button class="btn-order" onclick="alert('The notebook has been added')">order now</button>
-                <button class="btn-delete" onclick="alert('The notebook has been removed')">🗑️</button>
+                <button class="btn-order" onclick="alert('Product added to order!')">🛒 Order Now</button>
+                <button class="btn-delete" onclick="alert('Product removed')">🗑️</button>
             </div>
         </div>
+
+        <!-- Product 2 -->
         <div class="product-card">
-            <img src="https://i.pinimg.com/736x/82/bd/9c/82bd9c66071316a6d18aaafa670bed44.jpg"
-                alt="Printed notebook with custom cover design" class="product-image">
-            <h3>Printed notebook</h3>
-            <p>Custom-printed cover, choose from 18 unique designs. Perfect for students, artists, and anyone who wants
-                a notebook that reflects their personality. Durable print that won't fade with daily use.</p>
+            <div class="product-image" style="background-image: url('notebook-printed.jpg');"></div>
+            <h3>Printed Notebook</h3>
+            <p>Custom printed cover with your own design, choose from 18 designs.</p>
             <div class="price">300 EGP</div>
             <div class="actions">
-                <button class="btn-order" onclick="alert('The notebook has been added.')">order now</button>
-                <button class="btn-delete" onclick="alert('The notebook has been removed.')">🗑️</button>
+                <button class="btn-order" onclick="alert('Product added to order!')">🛒 Order Now</button>
+                <button class="btn-delete" onclick="alert('Product removed')">🗑️</button>
             </div>
         </div>
+
+        <!-- Product 3 -->
         <div class="product-card">
-            <img src="https://i.pinimg.com/1200x/db/74/89/db7489fc0fdd6057d51c762567eba685.jpg"
-                alt="Recycled paper notebook eco-friendly hardcover" class="product-image">
-            <h3>Recycled paper notebook</h3>
-            <p>Eco-friendly recycled paper with a sturdy hardcover, available in blank or lined pages. Great for
-                journaling, sketching, or everyday notes. A sustainable choice for the environmentally conscious writer.
-            </p>
+            <div class="product-image" style="background-image: url('notebook-eco.jpg');"></div>
+            <h3>Eco-Friendly Paper Notebook</h3>
+            <p>Recycled paper, cardboard cover, perfect for students and daily use.</p>
             <div class="price">150 EGP</div>
             <div class="actions">
-                <button class="btn-order" onclick="alert('The notebook has been added')">order now</button>
-                <button class="btn-delete" onclick="alert('The notebook has been removed')">🗑️</button>
+                <button class="btn-order" onclick="alert('Product added to order!')">🛒 Order Now</button>
+                <button class="btn-delete" onclick="alert('Product removed')">🗑️</button>
             </div>
         </div>
+
     </div>
+
 </body>
 
 </html>
