@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc><loc>https://mohamed27mans-prog.github.io/mans-notes/index.html</loc></loc>
+    <loc><loc>User-agent: *
+Sitemap: https://mohamed27mans-prog.github.io/mans-notes/sitemap.xml</loc></loc>
   </url>
   <url>
-    <loc><loc>https://mohamed27mans-prog.github.io/mans-notes/contact.html</loc></loc>
+    <loc><loc>User-agent: *
+Sitemap: https://mohamed27mans-prog.github.io/mans-notes/sitemap.xml</loc></loc>
   </url>
 </urlset>
